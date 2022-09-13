@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './GlobalStyles.scss'
-
+import './GlobalResponsive.scss'
 
 function GlobalStyles({ children }) {
     return React.Children.only(children)

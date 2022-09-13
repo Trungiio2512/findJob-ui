@@ -1,0 +1,31 @@
+.menu {
+    min-width: 200px;
+    
+    &__list {
+        padding: 10px 0;
+    }
+
+    &__heading {
+        color: var(--heading-color);
+        text-align: start;
+        margin-bottom: 10px;
+        position: relative;
+        text-align: center;
+        &-btn {
+            position: absolute;
+            top: -10px;
+            left: 0;
+        }
+    }
+
+    &__btn {
+        justify-content: flex-start;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 0 !important;
+    }
+}

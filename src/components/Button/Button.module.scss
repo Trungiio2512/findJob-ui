@@ -1,0 +1,79 @@
+@mixin dfCenter {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+.btn {
+    font-size: 1.4rem;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: var(--text-second-color);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    @include dfCenter;
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.btn + .btn {
+    margin-left: 12px;
+}
+
+.icon {
+    font-size: 1.6rem;
+    color: var(--desc);
+    @include dfCenter;
+}
+
+.icon--left {
+    margin-right: 10px;
+}
+
+.icon--right {
+    margin-left: 10px;
+}
+//size
+.small {
+    padding: 4px 10px;
+    font-size: 1.2rem;
+}
+
+.lagre {
+    padding: 14px 26px;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+//types
+.outline.primary {
+    border-color: var(--primary);
+}
+
+.outline:hover {
+    border-color: var(--primary);
+}
+
+.outline {
+    border-color: var(--border-color);
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.hot,
+.newJob {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.hot {
+    background-color: var(--fourth);
+}
+.newJob {
+    background-color: var(--second);
+}

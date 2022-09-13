@@ -2,7 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 :root {
-    
+    --primary: #f7941d;
+    --second: #00b9f3;
+    --third: #e02020;
+    --fourth: #f96b6b;
+    --white: #fff;
+    --black: #000;
+    --heading-color: #363636;
+    --text-color: #333;
+    --text-second-color: #555;
+    --desc: #999;
+    --border-color: #ccc;
+
+    --pl-pr: 42px;
+
+    --side-bar-width: 100px;
+    --header-height: 66px;
+    --search-height: 46px;
+    --search-width: 361px;
+    --search-button-width: 52px;
+    --search-button-radius: 92px;
 }
 
 html {
@@ -21,6 +40,20 @@ body {
     text-rendering: optimizeLegibility;
     color: rgba(22, 24, 35, 1);
     overflow-y: overlay;
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 1);
+        font-weight: 600;
+        line-height: 22px;
+        font-size: 1.6rem;
+        border-radius: 8px;
+    }
+    .tippy-arrow {
+        background-color: rgba(84, 84, 84, 1);
+    }
+
+    .tippy-content {
+        padding: 6px 9px 8px;
+    }
 }
 
 input,

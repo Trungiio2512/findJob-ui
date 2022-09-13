@@ -1,0 +1,11 @@
+.wrapper {
+}
+
+.container {
+    display: flex;
+    margin-top: var(--header-height);
+    &__wrapper {
+        max-width: calc(100% - var(--side-bar-width));
+        width: 100%;
+    }
+}

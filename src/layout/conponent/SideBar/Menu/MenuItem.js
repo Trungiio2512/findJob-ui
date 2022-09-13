@@ -1,0 +1,24 @@
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import classNames from 'classnames/bind';
+import styles from './Menu.module.scss';
+const cx = classNames.bind(styles);
+function MenuItem({ title, to, icon, iconActive }) {
+    return (
+        <li>
+            <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to={to}>
+                <span className={cx('icon')}>{icon}</span>
+                <span className={cx('iconActive')}>{iconActive}</span>
+                <span className={cx('menu-title')}>{title}</span>
+            </NavLink>
+        </li>
+    );
+}
+
+MenuItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    icon: PropTypes.node.isRequired,
+};
+
+export default MenuItem;
