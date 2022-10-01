@@ -1,0 +1,53 @@
+@mixin dfCenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section {
+    border: 1px solid transparent;
+    margin-top: 20px;
+
+    &__title h2 {
+        color: var(--text-color);
+        font-size: 2.4rem;
+        font-weight: 700;
+        padding: 4px 0;
+        text-transform: capitalize;
+    }
+
+    &__showAll {
+        font-size: 1.6rem;
+        color: var(--second);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+}
+
+.section.sectionBoder {
+    border-radius: 8px;
+    border-color: var(--section-border-color);
+    .section__content {
+        padding: 24px;
+    }
+}
+
+.section.sectionImgTitle {
+    .section__title {
+        background-color: #f2f7ff;
+        background-image: url(https://staging.vietnamworks.com/assets-page-container/images/featured-jobs-background.png);
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        @include dfCenter;
+    }
+}
+
+.section.shouldShowAll {
+    .section__title {
+        margin-bottom: 14px;
+        padding: 20px 28px 20px 40px;
+    }
+}

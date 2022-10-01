@@ -13,6 +13,7 @@ const Button = forwardRef(
             outline = false,
             primary = false,
             hot = false,
+            news = false,
             to,
             newJob,
             href,
@@ -39,6 +40,7 @@ const Button = forwardRef(
             newJob,
             small,
             lagre,
+            news,
         });
 
         // remove event when btn disabled

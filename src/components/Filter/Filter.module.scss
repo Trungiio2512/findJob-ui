@@ -1,0 +1,75 @@
+@mixin df {
+    display: flex;
+}
+
+.filter {
+    //filter bar
+    &__bar {
+        @include df;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 12px;
+        background-color: #e5eeff;
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+    &__list {
+        @include df;
+        width: 100%;
+    }
+    &__item {
+        min-width: 200px;
+        @include df;
+        flex-direction: column;
+    }
+
+    &__item ~ &__item {
+        margin-left: 12px;
+    }
+
+    &__title {
+        display: block;
+        line-height: 1.4rem;
+        color: var(--text-color);
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__clear {
+        @include df;
+        &-btn {
+            min-width: 90px;
+            font-size: 1.4rem;
+            padding: 4px 6px;
+            cursor: pointer;
+        }
+    }
+
+    //filter result
+
+    &__sum {
+        display: inline-block;
+        padding: 12px 22px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        margin-bottom: 12px;
+        strong {
+            margin-right: 4px;
+            color: var(--third);
+        }
+
+        span {
+            font-size: 1.4rem;
+            color: var(--desc);
+        }
+    }
+
+    &__list {
+    }
+}
+
+// cutom react-select
+
+.react-select {
+    width: 250px;
+}

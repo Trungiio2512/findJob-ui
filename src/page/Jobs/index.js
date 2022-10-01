@@ -1,5 +1,11 @@
+import SectionWrapper from '~/components/SectionWrapper';
+import Filter from '~/components/Filter';
 function Jobs() {
-    return ( <h1>Jobs Page</h1> );
+    return (
+        <SectionWrapper>
+            <Filter />
+        </SectionWrapper>
+    );
 }
 
 export default Jobs;

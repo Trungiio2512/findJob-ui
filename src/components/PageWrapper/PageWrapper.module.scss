@@ -1,0 +1,10 @@
+@mixin w100p {
+    width: 100%;
+}
+
+.page {
+    @include w100p;
+    &__container {
+        @include w100p;
+    }
+}

@@ -1,0 +1,146 @@
+@mixin dfCol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin dfCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(120deg, #fff687, #f6416c);
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: var(--white);
+}
+
+.heading {
+    line-height: 3rem;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+// form-group
+.login-form {
+    @include dfCol;
+}
+
+.form__group {
+    @include dfCol;
+    label {
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--black);
+        margin-bottom: 8px;
+    }
+    input {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 10px 15px;
+        caret-color: var(--primary);
+        color: var(--text-color);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        background-color: var(--white);
+        transition: all 0.2s ease-in-out;
+        &:focus {
+            border-color: var(--primary);
+        }
+    }
+}
+
+.form__input {
+    position: relative;
+
+    .show-pass {
+        font-size: 1.8rem;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: var(--text-color);
+    }
+}
+
+.btn-submit {
+    background-image: linear-gradient(110deg, #fff687, #f64164);
+    max-width: 200px;
+    width: 100%;
+    align-self: center;
+    margin-top: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: none;
+    color: var(--black);
+    transition: all 0.2s ease-in-out;
+}
+
+.form__group ~ .form__group {
+    margin-top: 20px;
+}
+
+.error {
+    color: var(--third);
+    font-size: 1.2rem;
+    // line-height: rem;
+    margin-top: 8px;
+}
+
+// .other-account
+.other-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.account {
+    // font-size: 3.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 2.4rem;
+    color: var(--white);
+    @include dfCenter;
+    &--facebook {
+        background-color: var(--second);
+    }
+    &--google {
+        background-color: var(--third);
+    }
+}
+
+.account ~ .account {
+    margin-left: 12px;
+}
+//forgot password
+
+.forgot-password {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+//other
+.other {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    strong {
+        margin-left: 4px;
+    }
+}

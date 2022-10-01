@@ -1,17 +1,24 @@
-import Slider from '~/components/Slider';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import PageWrapper from '~/components/PageWrapper';
+import SectionWrapper from '~/components/SectionWrapper';
+import CompanyList from '~/components/Company';
+import Banner from '~/components/Banner1';
+import JobQuick from '~/components/JobQuick';
+import Profession from '~/components/Profession';
+
 function Home() {
     return (
-        <div className="app__home">
-            <div className="app__home-slider">
-                <Slider />
-            </div>
-            <div>Công ty hàng đầu</div>
-            <div>Việc làm tốt nhất</div>
-            <div>Ngành nghề trọng điểm</div>
-            <div>Việc làm gợi ý</div>
-        </div>
+        <PageWrapper>
+            <Banner />
+            <SectionWrapper sectionTitle>
+                <CompanyList />
+            </SectionWrapper>
+            <SectionWrapper sectionTitle sectionBoder shouldShowAll sectionImgTitle>
+                <JobQuick />
+            </SectionWrapper>
+            <SectionWrapper sectionTitle>
+                <Profession />
+            </SectionWrapper>
+        </PageWrapper>
     );
 }
 

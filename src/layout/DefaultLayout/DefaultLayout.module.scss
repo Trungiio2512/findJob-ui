@@ -6,6 +6,7 @@
     margin-top: var(--header-height);
     &__wrapper {
         max-width: calc(100% - var(--side-bar-width));
+        padding: var(--pl-pr);
         width: 100%;
     }
 }

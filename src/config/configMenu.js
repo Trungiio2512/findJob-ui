@@ -18,13 +18,6 @@ const MENU_LOGIN = [
     {
         icon: <GoogleIcon />,
         title: 'Với Google',
-        subMenu: {
-            title: 'Ngôn ngữ',
-            data: [
-                { code: 'vi', title: 'Tiếng việt' },
-                { code: 'en', title: 'English' },
-            ],
-        },
     },
     {
         icon: <LoginIcon />,
@@ -61,6 +54,13 @@ const MENU_NOT_USER = [
     {
         icon: <LanguageIcon />,
         title: 'Tiếng việt',
+        subMenu: {
+            title: 'Ngôn ngữ',
+            data: [
+                { code: 'vi', title: 'Tiếng việt' },
+                { code: 'en', title: 'English' },
+            ],
+        },
     },
     {
         icon: <SupportIcon />,

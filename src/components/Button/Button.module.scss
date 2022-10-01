@@ -1,7 +1,12 @@
 @mixin dfCenter {
     display: flex;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
+}
+
+@mixin sizeS {
+    padding: 4px 10px;
+    font-size: 1.2rem;
 }
 
 .btn {
@@ -38,8 +43,7 @@
 }
 //size
 .small {
-    padding: 4px 10px;
-    font-size: 1.2rem;
+    @include sizeS;
 }
 
 .lagre {
@@ -66,7 +70,8 @@
 }
 
 .hot,
-.newJob {
+.newJob,
+.news {
     color: var(--white);
     font-weight: 600;
 }
@@ -74,6 +79,11 @@
 .hot {
     background-color: var(--fourth);
 }
+
 .newJob {
     background-color: var(--second);
+}
+
+.news {
+    background-color: #48bbff;
 }

@@ -1,0 +1,31 @@
+.footer {
+    margin-top: 48px;
+    background-color: var(--footer-color);
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    padding: 40px 24px;
+    box-shadow: inset 0 1px 0 0 rgb(0 90 255 / 3%);
+    &__heading {
+        color: var(--white);
+        margin-bottom: 15px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__item {
+        color: var(--desc);
+        font-size: 1.4rem;
+        padding: 4px 0;
+        transition: color 0.2s ease;
+        &:hover {
+            color: var(--primary);
+        }
+    }
+    &__item ~ &__item {
+        margin-top: 6px;
+    }
+}

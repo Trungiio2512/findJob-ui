@@ -4,7 +4,7 @@
 :root {
     --primary: #f7941d;
     --second: #00b9f3;
-    --third: #e02020;
+    --third: #ff4a53;
     --fourth: #f96b6b;
     --white: #fff;
     --black: #000;
@@ -13,8 +13,10 @@
     --text-second-color: #555;
     --desc: #999;
     --border-color: #ccc;
+    --section-border-color: #ccdeff;
+    --footer-color: #001744;
 
-    --pl-pr: 42px;
+    --pl-pr: 0 48px;
 
     --side-bar-width: 100px;
     --header-height: 66px;
@@ -64,9 +66,13 @@ button,
     background-color: transparent;
 }
 
-a[href] {
+a {
     color: rgba(22, 24, 35, 1);
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
 }
 
 //fonts emmbeded

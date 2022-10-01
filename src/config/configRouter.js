@@ -4,5 +4,8 @@ const router = {
     viewQuestion: '/viewQuestion',
     blog: '/blog',
     jobs: '/jobs',
-}
+    login: '/login',
+    register: '/register',
+    admin: '/admin',
+};
 export default router;

@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import { useState, forwardRef, useEffect } from 'react';
-import classNames from 'classnames';
-import images from '~/assets/images'
+
+import images from '~/assets/images';
 import styles from './Image.module.scss';
+
+const cx = classNames.bind(styles);
 
 const Image = forwardRef(({ src, alt, className, customFallback = images.noImage, ...props }, ref) => {
     const [fallback, setFallback] = useState('');
@@ -10,10 +13,10 @@ const Image = forwardRef(({ src, alt, className, customFallback = images.noImage
         if (!src) {
             setFallback(customFallback);
         }
-    }, [])
+    }, []);
     return (
         <img
-            className={classNames(styles.wrapper, className)}
+            className={cx('img-default', { [className]: className })}
             ref={ref}
             src={fallback || src}
             alt={alt || 'anh mac dinh'}
